@@ -110,7 +110,7 @@ All predicates must return nil for `smart-god-local-mode' to start."
                (or (member last-key smart-god-mode-do-and-enter-keys)
                    (and smart-god-mode-auto-enter-on-ctrl-keys
                         (< 1 (length last-key))
-                        (string= "C-" (subseq last-key 0 2))
+                        (string= "C-" (seq-subseq last-key 0 2))
                         (not (member last-key
                                      smart-god-mode-auto-enter-on-ctrl-exempt-keys)))))
       (smart-god-local-mode))))
@@ -147,10 +147,10 @@ All predicates must return nil for `smart-god-local-mode' to start."
         (when (string= last-key "<backspace>")
           (setq last-key "DEL")
           (when-let (binding (key-binding (kbd last-key)))
-            (call-interactively binding)))))
+            (call-interactively binding)))))))
     ;; (print last-key)
     ;; (print (key-binding last-key))
-    ))
+    
 
 (defun smart-god-mode-set-exit-and-do-keys (new-value)
   (setq smart-god-mode-exit-and-do-keys new-value)
