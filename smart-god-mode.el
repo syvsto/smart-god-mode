@@ -63,7 +63,6 @@
       vc-annotate-mode
       magit-status-mode
       minibuffer-inactive-mode
-      org-mode
       term-mode
       slime-repl-mode
       sldb-mode
