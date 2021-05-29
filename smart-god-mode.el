@@ -57,11 +57,22 @@
   :type 'string)
 
 (defcustom smart-god-exempt-major-modes
-  '(dired-mode
-    grep-mode
-    vc-annotate-mode
-    git-commit-mode  ; For versions prior to Magit 2.1.0
-    magit-popup-mode)
+    '(dired-mode
+      grep-mode
+      vc-annotate-mode
+      magit-status-mode
+      minibuffer-inactive-mode
+      org-mode
+      term-mode
+      slime-repl-mode
+      sldb-mode
+      markdown-mode
+      magit-status-mode
+      dired-mode
+      shell-mode
+      inferior-python-mode
+      git-commit-mode  ; For versions prior to Magit 2.1.0
+      magit-popup-mode)
   "List of major modes that should not start with `smart-god-local-mode' enabled."
   :group 'smart-god
   :type '(function))
