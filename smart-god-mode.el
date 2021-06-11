@@ -66,7 +66,6 @@
       term-mode
       slime-repl-mode
       sldb-mode
-      markdown-mode
       magit-status-mode
       dired-mode
       shell-mode
